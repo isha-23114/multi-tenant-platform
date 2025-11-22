@@ -1,0 +1,8 @@
+CREATE TABLE tenants (
+    id SERIAL PRIMARY KEY,
+    tenant_key VARCHAR(50) UNIQUE NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    plan VARCHAR(50) DEFAULT 'free',
+    active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
